@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "514194167412",
+    "project_id": "r-buses-y-camiones",
+    "storage_bucket": "r-buses-y-camiones.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514194167412:android:066fee8931b38a9f762321",
+        "android_client_info": {
+          "package_name": "com.app.rbusesycamiones"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8onJkaMpQs4e0tYBNI1qEIHbOyBZSJqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

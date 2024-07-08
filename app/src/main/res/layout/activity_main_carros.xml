@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityCarros">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_header"
+        android:name="com.app.rbusesycamiones.ui.header.HeaderFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_header"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carview_filter_marca"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                cardCornerRadius="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="10dp"
+                android:layout_marginStart="5dp">
+
+                <Spinner
+                    android:id="@+id/spinner_marca"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"/>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carview_filter_año"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                cardCornerRadius="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <Spinner
+                    android:id="@+id/spinner_modelo"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"/>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessLeaf">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageCarros"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/nameCar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:text="Texto al lado de la imagen"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--
+            En este ScrollView se debe mostrar todos lo vehiculos de que se cargen
+            de la categoria carros (Automoviles, camionetas, camperos)
+            Aprovechado que se puden filtrar por Marca y modelo
+            -->
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
